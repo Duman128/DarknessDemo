@@ -4,16 +4,45 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 4;
+    //Movement
+    public float speed;
+    public float jump;
+    public float distance;
+    float moveVelocity;
 
-    float xAxis;
-    float yAxis;
+    public LayerMask layerMask;
 
-    private void FixedUpdate()
+    //Grounded Vars
+    bool isGrounded = true;
+
+    void Update()
     {
-        xAxis = Input.GetAxis("Horizontal");
-        yAxis = Input.GetAxis("Vertical");
+        //Jumping
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Physics2D.Raycast(transform.position,Vector2.down, distance, layerMask))
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
+                isGrounded = false;
+            }
+        }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(xAxis * speed, yAxis * speed);
+        moveVelocity = 0;
+
+        //Left Right Movement
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            moveVelocity = -speed;
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            moveVelocity = speed;
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+
     }
+    
 }

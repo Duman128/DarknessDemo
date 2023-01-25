@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
-    Animator animator;
+    public static Animator animator;
     Rigidbody2D rb;
     private string currentState;
 
@@ -16,19 +16,26 @@ public class Animation : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb.velocity.y < 0)
-            ChangeAnimationState("FallAnim");
-        else if (rb.velocity.y > 0)
-            ChangeAnimationState("JumpAnim");
+        if (Attack.Instance.isAttacking2)
+            ChangeAnimationState("Attack2", currentState, animator);
+
+        else if (Attack.Instance.isAttacking)
+            ChangeAnimationState("Attack1", currentState, animator);
+
+        else if (rb.velocity.y < -0.001f)
+            ChangeAnimationState("FallAnim", currentState, animator);
+
+        else if (rb.velocity.y > 0.001f)
+            ChangeAnimationState("JumpAnim", currentState, animator);
 
         else if (Input.GetAxisRaw("Horizontal") != 0)
-            ChangeAnimationState("RunAnim");
+            ChangeAnimationState("RunAnim", currentState, animator);
 
-        else
-            ChangeAnimationState("Idle");
+        else 
+            ChangeAnimationState("Idle", currentState, animator);
     }
 
-    void ChangeAnimationState(string newState)
+    public static void ChangeAnimationState(string newState, string currentState, Animator animator)
     {
         if (currentState == newState) return;
 

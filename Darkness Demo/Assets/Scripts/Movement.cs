@@ -12,19 +12,13 @@ public class Movement : MonoBehaviour
 
     public LayerMask layerMask;
 
-    //Grounded Vars
-    bool isGrounded = true;
-
-    void Update()
+    void FixedUpdate()
     {
         //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Physics2D.Raycast(transform.position,Vector2.down, distance, layerMask))
-            {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
-                isGrounded = false;
-            }
         }
 
         moveVelocity = 0;

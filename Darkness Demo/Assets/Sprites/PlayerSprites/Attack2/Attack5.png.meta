@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67fcc325902bb2e4cae75c9511e1e146
+guid: 54d1513cd3a359b4a9ba63aa2fcb82e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JumpAnimation6_0
+      name: Attack5_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 155
-        width: 103
-        height: 197
+        x: 120
+        y: 35
+        width: 94
+        height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c89596c3d7f93644986a0cb387739c1
-      internalID: -1028899697
+      spriteID: f3ccc7580e2cfc44380f8e285532edf7
+      internalID: 216880369
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      JumpAnimation6_0: -1028899697
+      Attack5_0: 216880369
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

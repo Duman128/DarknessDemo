@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b5a57da26e72ad048b0a381315e3f9f4
+guid: 9de51fec3a13c324792308338d19af27
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,66 +101,26 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: (4)_0
+      name: StrikeAttack3_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 20
-        width: 79
-        height: 193
+        x: 65
+        y: 6
+        width: 96
+        height: 188
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 21.5, y: 91.5}
-        - {x: -24.5, y: 91.5}
-        - {x: -24.5, y: -91.5}
-        - {x: 21.5, y: -90.5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ee752222994ac459f57dc5aadd1307
-      internalID: 1090218853
+      spriteID: c40a33bf83c504e4e8da7d4298d297ff
+      internalID: 1550322395
       vertices: []
       indices: 
       edges: []
@@ -176,7 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      (4)_0: 1090218853
+      StrikeAttack3_0: 1550322395
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

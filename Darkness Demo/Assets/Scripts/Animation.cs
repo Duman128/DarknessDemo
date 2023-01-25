@@ -16,7 +16,10 @@ public class Animation : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Attack.Instance.isAttacking2)
+        if (Attack.Instance.isAttacking3)
+            ChangeAnimationState("Attack3", currentState, animator);
+
+        else if (Attack.Instance.isAttacking2)
             ChangeAnimationState("Attack2", currentState, animator);
 
         else if (Attack.Instance.isAttacking)

@@ -15,6 +15,7 @@ public class Attack : MonoBehaviour
 
     public bool isAttacking = false;
     public bool isAttacking2 = false;
+    public bool isAttacking3 = false;
     public Animator animator;
     public int attackCount = 0;
 
@@ -40,6 +41,10 @@ public class Attack : MonoBehaviour
         {
             StartCoroutine(attack2());
         }
+        else if (Input.GetMouseButtonDown(0) && !isAttacking && attackCount == 2)
+        {
+            StartCoroutine(attack3());
+        }
     }
 
     IEnumerator attack1()
@@ -48,12 +53,14 @@ public class Attack : MonoBehaviour
         movement.enabled = false;
         isAttacking = true;
 
-        yield return new WaitForSeconds(0.28f);
+        yield return new WaitForSeconds(0.45f);
 
         attackCount = 1;
         isAttacking = false;
         movement.enabled = true;
-        
+
+        yield return new WaitForSeconds(2f);
+        attackCount = 0;
     }
 
     IEnumerator attack2()
@@ -64,10 +71,27 @@ public class Attack : MonoBehaviour
 
         yield return new WaitForSeconds(0.28f);
 
-        attackCount = 0;
+        attackCount = 2;
         movement.enabled = true;
         isAttacking2 = false;
+
+        yield return new WaitForSeconds(2f);
+        attackCount = 0;
     }
+
+    IEnumerator attack3()
+    {
+        isAttacking3 = true;
+        rb.velocity = Vector2.zero;
+        movement.enabled = false;
+
+        yield return new WaitForSeconds(0.45f);
+
+        attackCount = 0;
+        movement.enabled = true;
+        isAttacking3 = false;
+    }
+
     IEnumerator FastAttack()
     {
         Vector2 directiron;

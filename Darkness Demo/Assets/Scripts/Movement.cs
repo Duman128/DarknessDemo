@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
         //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Physics2D.Raycast(transform.position,Vector2.down, distance, layerMask))
+            if (Physics2D.Raycast(transform.position, Vector2.down, distance, layerMask))
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
         }
 
@@ -27,12 +27,12 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             moveVelocity = -speed;
-            GetComponent<SpriteRenderer>().flipX = true;
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             moveVelocity = speed;
-            GetComponent<SpriteRenderer>().flipX = false;
+            transform.localScale = new Vector3(1, 1, 1);
         }
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);

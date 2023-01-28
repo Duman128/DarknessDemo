@@ -1,19 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PatrolAndDetect : MonoBehaviour
 {
+    
     public static Transform enemyTransform;
     public Transform[] MovePoints;
-    public Transform Player;
+    private Transform Player;
 
     public float speed;
     private float waitTime;
     public float startWaitSpeed;
 
-    public static bool takedDamage = false;
+    public bool takedDamage = false;
 
     public LayerMask PlayerMask;
     public float rayRadius;
@@ -30,9 +33,17 @@ public class PatrolAndDetect : MonoBehaviour
     public int damage;
     public float waitTimeAfterAttack;
 
+    public float MinDetectX;
+    public float MinDetectY;
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, rayRadius);
+    }
+
+    private void Awake()
+    {
+        Player = GameObject.Find("Player").transform;
     }
 
     void Start()
@@ -55,19 +66,31 @@ public class PatrolAndDetect : MonoBehaviour
         {
             if (Physics2D.OverlapCircle(transform.position, rayRadius, PlayerMask)) //Player Follow Code
             {
-                TargetPosition = new Vector2(Player.position.x, transform.position.y);
+                    TargetPosition = new Vector2(Player.position.x, transform.position.y);
 
                 if (Vector2.Distance(transform.position, TargetPosition) > minDistance)
                 {
                     flipX(TargetPosition, transform.position);
                     transform.position = Vector2.MoveTowards(transform.position, TargetPosition, speed * 2 * Time.deltaTime);
                 }
-                else
-                    playerAttackAndFlip();
+
+                else if (MathF.Abs(transform.position.x - Player.position.x) < MinDetectX)
+                {
+                    if (MathF.Abs(transform.position.y - Player.position.y) < MinDetectY)
+                    {
+                        playerAttackAndFlip();
+                    }
+
+                    else
+                        GetComponent<EnemyAnimation>().State = EnemyAnimation.AnimStates.Idle;
+                }
             }
+            
             else
                 Patrol();
-        }else
+        }
+
+        else
             GetComponent<EnemyAnimation>().State = EnemyAnimation.AnimStates.Hurt;
     }
 

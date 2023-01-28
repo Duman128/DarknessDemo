@@ -26,7 +26,7 @@ public class EnemyAnimation : MonoBehaviour
     const string DeathAnim = "Death";
     const string AttackAnim = "Attack";
 
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
     }

@@ -109,11 +109,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 293
-        y: 214
+        y: 267
         width: 233
-        height: 404
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 349
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,11 +130,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1099
-        y: 189
+        y: 331
         width: 233
-        height: 427
-      alignment: 9
-      pivot: {x: 0.5, y: 0.54411143}
+        height: 285
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,11 +151,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1905
-        y: 225
+        y: 230
         width: 234
-        height: 391
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,11 +172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2737
-        y: 191
+        y: 331
         width: 233
-        height: 425
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 285
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,6 +184,111 @@ TextureImporter:
       bones: []
       spriteID: 233f6ff1066f9dc42af2b892e437cd01
       internalID: 983929102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 267
+        width: 42
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca829fdff3fd904e89ed646cc16588e
+      internalID: 161864958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 229
+        width: 41
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ce97adb3ad44e41a1207eb04b32b60
+      internalID: 1545126494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 216
+        width: 42
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ef894b106188d448719c04b16a74a4
+      internalID: -595027870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 190
+        width: 41
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fec5433e5c215645acbb32cc2ba3e3b
+      internalID: 525666963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 190
+        width: 41
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5ad66fe504dfb499deabdfd7245d66
+      internalID: -673218303
       vertices: []
       indices: 
       edges: []

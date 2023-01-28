@@ -11,8 +11,21 @@ public class EnemyAttack : MonoBehaviour
         if (Physics2D.OverlapCircle(hitPoint, hitPointRadius, PlayerLayer))
         {
             hitInfo.transform.GetComponent<IDamageable>().TakeDamage(damage, waitTime);
-            if (hitInfo.transform.tag == "Enemy")
-                Attack.contactTheEnemy = true;
+
+            if (hitInfo.transform.gameObject.layer == 7)
+            {
+                if(hitInfo.transform.tag == "FlyEnemies"){
+                    Attack._flyEnemyAI = hitInfo.transform.GetComponent<FlyEnemyAI>();
+                    Attack.contactThFlyEnemy = true;
+                }
+                else
+                {
+                    Attack._patrolAndDetect = hitInfo.transform.GetComponent<PatrolAndDetect>();
+                    Attack.contactTheEnemy = true;
+                }
+                
+            }//"Enemy" Layer Value is 7
+                
         }
              
     }

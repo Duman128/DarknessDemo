@@ -9,9 +9,9 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public float Health { get; set; }
 
     private float time = 0;
+
     void Start()
     {
-        
         Health = _health;
     }
 
@@ -24,7 +24,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
             if (Health <= 0)
             {
-                if (transform.tag == "Enemy")
+                if (gameObject.tag == "WalkEnemies")
                     StartCoroutine(DeathEnemy());
             }
         }

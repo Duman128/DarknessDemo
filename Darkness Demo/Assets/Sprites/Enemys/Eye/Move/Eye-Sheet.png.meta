@@ -112,8 +112,8 @@ TextureImporter:
         y: 242
         width: 259
         height: 374
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +129,12 @@ TextureImporter:
       name: Eye-Sheet_1
       rect:
         serializedVersion: 2
-        x: 1055
-        y: 183
-        width: 329
-        height: 433
-      alignment: 9
-      pivot: {x: 0.5715636, y: 0.59062546}
+        x: 1103
+        y: 245
+        width: 281
+        height: 371
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: Eye-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1841
-        y: 192
-        width: 362
-        height: 413
-      alignment: 9
-      pivot: {x: 0.61590004, y: 0.5898665}
+        x: 1892
+        y: 242
+        width: 311
+        height: 376
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,11 +172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2737
-        y: 191
+        y: 240
         width: 285
-        height: 425
-      alignment: 9
-      pivot: {x: 0.511323, y: 0.59492296}
+        height: 376
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

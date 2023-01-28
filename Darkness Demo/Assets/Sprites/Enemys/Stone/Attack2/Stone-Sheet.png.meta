@@ -112,8 +112,8 @@ TextureImporter:
         y: 71
         width: 144
         height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +129,12 @@ TextureImporter:
       name: Stone-Sheet_3
       rect:
         serializedVersion: 2
-        x: 778
+        x: 782
         y: 71
-        width: 258
+        width: 254
         height: 212
       alignment: 9
-      pivot: {x: 0.68181735, y: 0.5052682}
+      pivot: {x: 0.6925618, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: Stone-Sheet_6
       rect:
         serializedVersion: 2
-        x: 1351
+        x: 1355
         y: 71
-        width: 278
+        width: 273
         height: 208
       alignment: 9
-      pivot: {x: 0.7089128, y: 0.48389113}
+      pivot: {x: 0.7545658, y: 0.004025496}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

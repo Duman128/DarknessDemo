@@ -22,12 +22,28 @@ public class HealthSystem : MonoBehaviour, IDamageable
             time = Time.time + waitTime;
             Health -= takedDamageValue;
 
+            if (transform.tag == "Boss")
+                GetComponent<Animator>().SetTrigger("Hurt");
+
             if (Health <= 0)
             {
                 if (gameObject.tag == "WalkEnemies")
                     StartCoroutine(DeathEnemy());
+                else if(gameObject.tag == "FlyEnemies")
+                    StartCoroutine(FlyDeathEnemy()); 
             }
         }
+    }
+
+    IEnumerator FlyDeathEnemy()
+    {
+        GetComponent<FlyEnemyAI>().enabled = false;
+        FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.DeathUp;
+        GetComponent<FlyEnemyAI>().aiPath.enabled = false;
+        GetComponent<SpriteRenderer>().DOFade(0, 2);
+        GetComponent<CircleCollider2D>().enabled = false;
+        yield return new WaitForSeconds(2.2f);
+        transform.parent.gameObject.SetActive(false);
     }
 
     IEnumerator DeathEnemy()

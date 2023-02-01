@@ -1,0 +1,321 @@
+fileFormatVersion: 2
+guid: 2bc0aacabbca84d4b840634238e1c23d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minator-Sheet1_0
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 21
+        width: 578
+        height: 493
+      alignment: 9
+      pivot: {x: 0.74249554, y: 0.00000005803292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3343eb69080ed6b43840565ee81e0f9f
+      internalID: 2049262598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_1
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 21
+        width: 456
+        height: 619
+      alignment: 9
+      pivot: {x: 0.5935926, y: -0.0000000061626775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05865697c34f0544b58a6ca45b537bb
+      internalID: -392078725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_2
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 21
+        width: 455
+        height: 615
+      alignment: 9
+      pivot: {x: 0.60658914, y: 0.0031543234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7202377bb335954a84ce0d5034835c9
+      internalID: 1955891328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_3
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 21
+        width: 536
+        height: 535
+      alignment: 9
+      pivot: {x: 0.53619295, y: -0.0000000071302755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d207188cf18c28438f4197342ac659f
+      internalID: 727335090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_4
+      rect:
+        serializedVersion: 2
+        x: 4189
+        y: 21
+        width: 544
+        height: 535
+      alignment: 9
+      pivot: {x: 0.5427928, y: -0.0000000071302755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76414ad4ebce2a64aa0bb5e556943db4
+      internalID: 1415962250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_5
+      rect:
+        serializedVersion: 2
+        x: 4965
+        y: 13
+        width: 688
+        height: 576
+      alignment: 9
+      pivot: {x: 0.64662206, y: 0.0033678827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a14bfef37d79d4080e35c511873e67
+      internalID: 1158604615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_6
+      rect:
+        serializedVersion: 2
+        x: 5910
+        y: 21
+        width: 701
+        height: 358
+      alignment: 9
+      pivot: {x: 0.65497184, y: 0.00541874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfea25ed0ff2a684898a67772e4233ff
+      internalID: 252474726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_7
+      rect:
+        serializedVersion: 2
+        x: 6893
+        y: 13
+        width: 680
+        height: 366
+      alignment: 9
+      pivot: {x: 0.6369356, y: -0.005300342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f9044d549797d41ac68a44beff70cf
+      internalID: -923086464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minator-Sheet1_8
+      rect:
+        serializedVersion: 2
+        x: 7860
+        y: 21
+        width: 670
+        height: 358
+      alignment: 9
+      pivot: {x: 0.63608325, y: -0.000000010655579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a33931bc52dbb04185f284154844b7b
+      internalID: 2003962698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Minator-Sheet1_7: -923086464
+      Minator-Sheet1_4: 1415962250
+      Minator-Sheet1_6: 252474726
+      Minator-Sheet1_3: 727335090
+      Minator-Sheet1_8: 2003962698
+      Minator-Sheet1_1: -392078725
+      Minator-Sheet1_2: 1955891328
+      Minator-Sheet1_0: 2049262598
+      Minator-Sheet1_5: 1158604615
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

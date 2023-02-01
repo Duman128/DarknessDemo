@@ -56,6 +56,7 @@ public class PatrolAndDetect : MonoBehaviour
 
     void Update()
     {
+        takedDamage = GetComponent<AttackForAllChar>().contactEnemy;
         EnemyMovementFonc();
     }
 
@@ -66,7 +67,7 @@ public class PatrolAndDetect : MonoBehaviour
         {
             if (Physics2D.OverlapCircle(transform.position, rayRadius, PlayerMask)) //Player Follow Code
             {
-                    TargetPosition = new Vector2(Player.position.x, transform.position.y);
+                TargetPosition = new Vector2(Player.position.x, transform.position.y);
 
                 if (Vector2.Distance(transform.position, TargetPosition) > minDistance)
                 {

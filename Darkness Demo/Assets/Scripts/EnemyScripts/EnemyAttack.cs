@@ -12,21 +12,11 @@ public class EnemyAttack : MonoBehaviour
         {
             hitInfo.transform.GetComponent<IDamageable>().TakeDamage(damage, waitTime);
 
-            if (hitInfo.transform.gameObject.layer == 7)
+            if (hitInfo.transform.gameObject.layer == 7)//"Enemy" Layer Value is 7
             {
-                if(hitInfo.transform.tag == "FlyEnemies"){
-                    Attack._flyEnemyAI = hitInfo.transform.GetComponent<FlyEnemyAI>();
-                    Attack.contactThFlyEnemy = true;
-                }
-                else
-                {
-                    Attack._patrolAndDetect = hitInfo.transform.GetComponent<PatrolAndDetect>();
-                    Attack.contactTheEnemy = true;
-                }
-                
-            }//"Enemy" Layer Value is 7
-                
+                Attack._attackForAllChar = hitInfo.transform.GetComponent<AttackForAllChar>();
+                Attack._attackForAllChar.contactEnemy = true;
+            }
         }
-             
     }
 }

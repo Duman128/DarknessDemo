@@ -6,6 +6,8 @@ TagManager:
   tags:
   - WalkEnemies
   - FlyEnemies
+  - Boss
+  - HitPoint
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
+  - Walls
   - 
   - 
   - 

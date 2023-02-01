@@ -16,13 +16,13 @@ public class Animation : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Attack.Instance.isAttacking3)
+        if (Attack.Instance.isAttacking && Attack.Instance.attackCount == 2)
             ChangeAnimationState("Attack3", currentState, animator);
 
-        else if (Attack.Instance.isAttacking2)
+        else if (Attack.Instance.isAttacking && Attack.Instance.attackCount == 1)
             ChangeAnimationState("Attack2", currentState, animator);
 
-        else if (Attack.Instance.isAttacking)
+        else if (Attack.Instance.isAttacking && Attack.Instance.attackCount == 0)
             ChangeAnimationState("Attack1", currentState, animator);
 
         else if (rb.velocity.y < -0.001f)

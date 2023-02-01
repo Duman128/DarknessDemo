@@ -10,6 +10,9 @@ public class FlyEnemyAI : MonoBehaviour
     private int randomPoint;
     public float PatrolSpeed;
 
+    public Transform isHereTriggerPosition;
+    public Vector3 isHereTriggerScale;
+
     public static Transform myBody;
     private Transform Player;
     public AIPath aiPath;
@@ -25,13 +28,16 @@ public class FlyEnemyAI : MonoBehaviour
 
     public float castRadius;
     public LayerMask playerLayer;
-    private bool isHit;
 
     public bool TakeDamageFlyEnemies = false;
 
+    private bool isHitPlayer;//if the object hit the player valuse is true, when return point[0] value is false
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(new Vector2(transform.position.x, transform.position.y + 1.5f), castRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(isHereTriggerPosition.position, isHereTriggerScale);
     }
 
     private void Awake()
@@ -42,23 +48,38 @@ public class FlyEnemyAI : MonoBehaviour
 
     private void Start()
     {
-        randomPoint = Random.Range(0, MovePoints.Length);
         _attackTime = Time.time + attackTime;
+        randomPoint = Random.Range(0, MovePoints.Length);
     }
 
     private void Update()
     {
-        Debug.Log(TakeDamageFlyEnemies);
-
+        TakeDamageFlyEnemies = GetComponent<AttackForAllChar>().contactEnemy;
         FlipX();
+
         if (!TakeDamageFlyEnemies)
         {
-            if (Vector2.Distance(transform.position, Player.position) < attackDistance)
+            if ((Vector2.Distance(transform.position, Player.position) < attackDistance) && isHeHere())
                 FollowFonc();
             else
                 Patrol();
-        }else
+        }
+        else
+        {
+            isHitPlayer = true;
             FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.Hurt;
+        }
+            
+
+
+    }
+
+    private bool isHeHere()//Check the character is inside the trigger Fonc
+    {
+        if (Physics2D.OverlapBox(isHereTriggerPosition.position, isHereTriggerScale, 0, playerLayer))
+            return true;
+        else
+            return false;
     }
 
     private void Patrol()// Patrol Code
@@ -66,64 +87,72 @@ public class FlyEnemyAI : MonoBehaviour
         
         for (int i = 0; i < MovePoints.Length; i++)
         {
-            _AIDestinationSetter.target = MovePoints[randomPoint];
-            aiPath.maxSpeed = PatrolSpeed;
-            isHit = true;
-
-            if (Vector2.Distance(transform.position, MovePoints[randomPoint].position) < 1.6f)
+            if (!isHeHere())
             {
-                if (_patrolWaitTime <= 0)
+                FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.Walk;
+                _AIDestinationSetter.target = MovePoints[randomPoint];
+
+                if (Vector2.Distance(transform.position, MovePoints[randomPoint].position) < 1.8f)
                 {
-                    randomPoint = Random.Range(0, MovePoints.Length);
-                    _patrolWaitTime = patrolWaitTime;
+
+                    aiPath.maxSpeed = PatrolSpeed;
+
+                    if (_patrolWaitTime <= 0)
+                    {
+                        randomPoint = Random.Range(0, MovePoints.Length);
+                        _patrolWaitTime = patrolWaitTime;
+                    }
+                    else
+                        _patrolWaitTime -= Time.deltaTime;
                 }
-                else
-                    _patrolWaitTime -= Time.deltaTime;
             }
+            else
+                _AIDestinationSetter.target = Player;
         }
     }
 
     private void FollowFonc()
     {
-        if (!isHit)
+        if (!isHitPlayer)
         {
             FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.AttackBfHit;
+            _AIDestinationSetter.target = Player;
 
             if (Physics2D.OverlapCircle(myBody.position, castRadius, playerLayer))
                 StartCoroutine(HitMoment());
 
+            else if (Time.time > _attackTime)
+            {
+                _attackTime = Time.time + attackTime;
+                isHitPlayer = true;
+
+            }
         }
 
-        else if (Vector2.Distance(myBody.position, MovePoints[0].position) <= 0.1f)
+        else
         {
-            _AIDestinationSetter.target = Player;
-            aiPath.maxSpeed = 6;
-            isHit = false;
-        }
-
-        if (Time.time > _attackTime)
-        {
-            isHit = true;
-            _attackTime = Time.time + attackTime;
             _AIDestinationSetter.target = MovePoints[0];
-            aiPath.maxSpeed = 4;
-        }
 
-        
+            if (Vector2.Distance(myBody.position, MovePoints[0].position) <= 1.8f)
+            {
+                _AIDestinationSetter.target = Player;
+                aiPath.maxSpeed = 6;
+                isHitPlayer = false;
+            }
+        }
     }
     IEnumerator HitMoment()
     {
-        isHit = true;
+        Debug.Log("asdasasda");
         _attackTime = Time.time + attackTime;
-        _AIDestinationSetter.target = Player;
-        FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.AttackHit;
-
-        yield return new WaitForSeconds(0.5f);
-
-        FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.Walk;
-
         _AIDestinationSetter.target = MovePoints[0];
         aiPath.maxSpeed = 4;
+        
+
+        FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.AttackHit;
+        yield return new WaitForSeconds(0.2f);
+        FlyEnemyAnimation.State = FlyEnemyAnimation.AnimStates.Walk;
+        isHitPlayer = true;
     }
 
     private void FlipX()

@@ -108,12 +108,12 @@ TextureImporter:
       name: AttackSource5_1
       rect:
         serializedVersion: 2
-        x: 341
+        x: 342
         y: 131
-        width: 242
-        height: 208
+        width: 243
+        height: 216
       alignment: 9
-      pivot: {x: 0.23901683, y: 0.4966261}
+      pivot: {x: 0.22832297, y: -0.00000007064254}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

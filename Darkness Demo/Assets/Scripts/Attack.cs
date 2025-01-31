@@ -61,7 +61,7 @@ public class Attack : MonoBehaviour
 
     void attack1()
     {
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         movement.enabled = false;
         isAttacking = true;
 
@@ -77,7 +77,7 @@ public class Attack : MonoBehaviour
     void attack2()
     {
         isAttacking = true;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         movement.enabled = false;
 
         if (_attackForAllChar == null)
@@ -92,7 +92,7 @@ public class Attack : MonoBehaviour
     void attack3()
     {
         isAttacking = true;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         movement.enabled = false;
 
         if (_attackForAllChar == null)
@@ -123,7 +123,7 @@ public class Attack : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         _attackForAllChar.contactEnemy = false;
 
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
 
         yield return new WaitForSeconds(waitTime);
 

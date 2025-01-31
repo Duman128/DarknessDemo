@@ -25,10 +25,10 @@ public class Animation : MonoBehaviour
         else if (Attack.Instance.isAttacking && Attack.Instance.attackCount == 0)
             ChangeAnimationState("Attack1", currentState, animator);
 
-        else if (rb.velocity.y < -0.001f)
+        else if (rb.linearVelocity.y < -0.001f)
             ChangeAnimationState("FallAnim", currentState, animator);
 
-        else if (rb.velocity.y > 0.001f)
+        else if (rb.linearVelocity.y > 0.001f)
             ChangeAnimationState("JumpAnim", currentState, animator);
 
         else if (Input.GetAxisRaw("Horizontal") != 0)
